@@ -1,0 +1,3 @@
+X8051 %1
+PAUSE
+LINK

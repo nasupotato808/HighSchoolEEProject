@@ -1,0 +1,22 @@
+
+Global Symbol Name             Global Value     Global Filename
+
+
+
+******************************************************************************
+*                             L O A D      M A P                             *
+******************************************************************************
+*    Section Name              Starting Address    Ending Address    Size    *
+******************************************************************************
+* A1.OBJ                                                                     *
+*    CODE                            0000               0025         0026    *
+******************************************************************************
+
+                  Linker Output Filename : A1.hex
+                  Disk Listing  Filename : A1.map
+                  Symbol Table  Filename : <None Specified>
+
+
+         Link Errors :  0                Output Format :  Intel Hex
+
+

@@ -1,0 +1,45 @@
+  Wed Jun 17 2009 01:09                                                                                                  Page    1
+
+
+
+
+
+
+
+               2500 A.D. 8051 Macro Assembler  -  Version 4.03a
+               ------------------------------------------------
+
+                       Input  Filename : A1.ASM
+                       Output Filename : A1.obj
+
+
+    1   0000                   		ORG	00H
+    2                          	
+    3   0000   74 FF           	START:	MOV	A,#FFH
+    4   0002   C3              		CLR 	C
+    5   0003   7A 08           		MOV 	R2,#08H
+    6   0005   33              	LOOP:	RLC	A
+    7   0006   F5 80           		MOV	P0,A
+    8   0008   12 00 19        		CALL	DELAY
+    9   000B   DA F8           		DJNZ	R2,LOOP
+   10   000D   7A 07           		MOV	R2,#07H
+   11   000F   13              	LOOP1:	RRC	A
+   12   0010   F5 80           		MOV	P0,A
+   13   0012   12 00 19        		CALL	DELAY
+   14   0015   DA F8           		DJNZ	R2,LOOP1
+   15   0017   01 00           		JMP	START
+   16   0019   7B 14           	DELAY:	MOV	R3,#20
+   17   001B   7C 14           	D1:	MOV	R4,#20
+   18   001D   7D F8           	D2:	MOV	R5,#248
+   19   001F   DD FE           		DJNZ	R5,$
+   20   0021   DC FA           		DJNZ	R4,D2
+   21   0023   DB F6           		DJNZ	R3,D1
+   22   0025   22              		RET
+   23   0026                   		END
+
+
+
+           Lines Assembled :  23             Assembly Errors :  0
+
+
+
